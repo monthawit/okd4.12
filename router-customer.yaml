@@ -1,0 +1,26 @@
+apiVersion: v1
+items:
+- apiVersion: operator.openshift.io/v1
+  kind: IngressController
+  metadata:
+    name: customer01
+    namespace: openshift-ingress-operator
+  spec:
+    namespaceSelector:
+      matchLabels:
+        kubernetes.io/metadata.name: demo-03
+    domain: customer01.dedyn.io
+    endpointPublishingStrategy:
+      type: NodePortService
+    nodePlacement:
+      nodeSelector:
+        matchLabels:
+          node-role.kubernetes.io/worker: ""
+    routeSelector:
+      matchLabels:
+        type: customer01
+  status: {}
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
