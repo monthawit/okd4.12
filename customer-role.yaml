@@ -785,3 +785,16 @@ rules:
       - route.openshift.io
     resources:
       - routes/status
+  - verbs:
+      - get
+      - list
+      - watch
+      - create
+      - delete
+      - deletecollection
+      - update
+      - patch
+    apiGroups:
+      - apps.gitlab.com
+    resources:
+      - runners
