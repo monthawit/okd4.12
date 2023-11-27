@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: example
+  namespace: lab-customer01
+spec:
+  hard:
+    ceph-fs-snapshot-class.volumesnapshotclasses.snapshot.storage.k8s.io/volumesnapshots: '5'
+    ceph-fs-storageclass.storageclass.storage.k8s.io/persistentvolumeclaims: '10'
+    ceph-fs-storageclass.storageclass.storage.k8s.io/requests.storage: 10Gi
+    ceph-rbd-snapshot-class.volumesnapshotclasses.snapshot.storage.k8s.io/volumesnapshots: '5'
+    ceph-rbd-storageclass.storage.k8s.io/persistentvolumeclaims: '10'
+    ceph-rbd-storageclass.storageclass.storage.k8s.io/requests.storage: 10Gi
+    count/volumesnapshots.snapshot.storage.k8s.io: '10'
+    limits.cpu: '8'
+    limits.ephemeral-storage: 2Gi
+    limits.memory: 10Gi
+    persistentvolumeclaims: '10'
+    pods: '10'
+    requests.cpu: '1'
+    requests.ephemeral-storage: 1Gi
+    requests.memory: 1Gi
+    requests.storage: 10Gi
