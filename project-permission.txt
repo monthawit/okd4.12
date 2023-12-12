@@ -8,3 +8,15 @@ oc adm policy add-cluster-role-to-user cluster-admin milky
 oc adm policy add-scc-to-user anyuid -z default -n ${YOUR_NAMESPACE}
 
 oc adm policy add-scc-to-user anyuid -z default -n namespace-name
+
+
+
+
+$ dig  _acme-challenge.ccvitaal.nl.ccvitaal.nl txt +short "glTMop6r8C8IUzeXqCm6qQq_tCE1_su2qFqO_nkOo8s"
+
+
+
+Cat /etc/letsencrypt/live/customer01.dedyn.io/fullchain.pem
+Block 1   =  Cert 
+Block 2   = CA  
+Block 3   = ?  
